@@ -21,7 +21,7 @@ const HeroSection = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
               deserunt maxime officiis doloribus velit.
             </h1>
-            <button className="font-bold font-poppins text-lg max-md:text-[8px] bg-[#B88E2F] text-white w-56 h-16 max-md:w-12 max-md:h-5">
+            <button className="font-bold font-poppins text-lg max-md:text-[8px] bg-[#B88E2F] text-white w-56 h-16 max-md:w-12 max-md:h-5 flex justify-center items-center max-md:font-semibold">
               BUY NOW
             </button>
           </div>

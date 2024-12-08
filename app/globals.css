@@ -5,6 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --geist-primary: var(--font-geist-sans);
+  --geist-mono: var(--font-geist-mono);
+  --montserrat: var(--font-montserrat);
+  --poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +22,21 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--montserrat, Arial, sans-serif);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply font-poppins text-3xl font-bold text-[#333333] max-md:text-xl;
+  }
+
+  .description {
+    @apply pb-10 font-poppins text-[#666666] max-md:text-sm;
   }
 }

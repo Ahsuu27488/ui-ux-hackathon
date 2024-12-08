@@ -12,8 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        montserrat: ["var(--montserrat)", "sans-serif"], // Montserrat font
+        poppins: ["var(--poppins)", "sans-serif"], // Poppins font
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

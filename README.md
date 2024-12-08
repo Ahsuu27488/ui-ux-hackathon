@@ -1,7 +1,7 @@
 
 # Furniro Ecommerce 🛒
 
-![Furniro Logo](https://via.placeholder.com/150)
+![Furniro Logo](https://github.com/Ahsuu27488/ui-ux-hackathon/blob/main/public/images/logo.png?raw=true)
 
 ## Project Purpose
 Furniro is an ecommerce platform developed for the Governor IT Initiative UIUX Hackathon. The platform offers a sleek and modern design, focused on providing a responsive and seamless shopping experience for users.
@@ -40,7 +40,7 @@ Furniro is an ecommerce platform developed for the Governor IT Initiative UIUX H
 ## Demo
 - Live site: [Furniro Ecommerce](https://furniro-hackathon.netlify.app/)
 
-![Homepage Screenshot](https://via.placeholder.com/800x400)
+![Homepage Screenshot](https://github.com/Ahsuu27488/ui-ux-hackathon/blob/main/public/images/banner.png?raw=true)
 
 ---
 

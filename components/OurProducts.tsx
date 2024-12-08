@@ -2,11 +2,11 @@ import React from "react";
 
 const OurProducts = () => {
   return (
-    <div className="px-[100px] py-[100px] flex flex-col justify-center items-center">
+    <div className="px-[100px] py-[100px] flex flex-col justify-center items-center min-w-full">
       <h1 className="heading pb-10">Our Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 sm:scale-50 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 justify-center">
         {/* Product1 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/syltherine.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
@@ -24,7 +24,7 @@ const OurProducts = () => {
           </div>
         </div>
         {/* Product2 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/leviosa.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
@@ -35,14 +35,11 @@ const OurProducts = () => {
             </p>
             <h3 className="font-semibold text-[20px] text-[#3A3A3A] flex justify-between items-center">
               Rp 2.500.000
-              {/* <span className="text-[16px] text-[#B0B0B0] line-through">
-                Rp 3.500.000
-              </span> */}
             </h3>
           </div>
         </div>
         {/* Product3 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/syltherine.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">Lolito</h2>
@@ -58,7 +55,7 @@ const OurProducts = () => {
           </div>
         </div>
         {/* Product4 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/respira.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
@@ -69,42 +66,33 @@ const OurProducts = () => {
             </p>
             <h3 className="font-semibold text-[20px] text-[#3A3A3A] flex justify-between items-center">
               Rp 500.000
-              {/* <span className="text-[16px] text-[#B0B0B0] line-through">
-                Rp 3.500.000
-              </span> */}
             </h3>
           </div>
         </div>
         {/* Product5 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/grifo.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">Grifo</h2>
             <p className="text-[#898989] text-[16px] font-medium">Night lamp</p>
             <h3 className="font-semibold text-[20px] text-[#3A3A3A] flex justify-between items-center">
               Rp 1.500.000
-              {/* <span className="text-[16px] text-[#B0B0B0] line-through">
-                Rp 3.500.000
-              </span> */}
             </h3>
           </div>
         </div>
         {/* Product6 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/muggo.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">Muggo</h2>
             <p className="text-[#898989] text-[16px] font-medium">Small mug</p>
             <h3 className="font-semibold text-[20px] text-[#3A3A3A] flex justify-between items-center">
               Rp 150.000
-              {/* <span className="text-[16px] text-[#B0B0B0] line-through">
-                Rp 3.500.000
-              </span> */}
             </h3>
           </div>
         </div>
         {/* Product7 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/pingky.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">Pingky</h2>
@@ -120,7 +108,7 @@ const OurProducts = () => {
           </div>
         </div>
         {/* Product8 */}
-        <div className="w-[285px] bg-[#F4F5F7]">
+        <div className="w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
           <img src="/images/products/potty.png" alt="Product" />
           <div className="px-5 py-[30px] flex flex-col">
             <h2 className="text-[#3A3A3A] font-semibold text-[24px]">Potty</h2>
@@ -135,6 +123,11 @@ const OurProducts = () => {
             </h3>
           </div>
         </div>
+      </div>
+      <div className="pt-12">
+        <button className="bg-transparent border border-[#B88E2F] w-60 h-12 font-semibold text-lg text-[#B88E2F] ">
+          Show More
+        </button>
       </div>
     </div>
   );

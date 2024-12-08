@@ -68,7 +68,7 @@ const page = () => {
             </h1>
           </div>
           <button className="text-[20px] bg-transparent border border-black rounded-xl w-52 h-14 max-sm:w-40 max-sm:h-12">
-            Check Out
+            <a href="/checkout">Check Out</a>
           </button>
         </div>
       </div>

@@ -35,10 +35,10 @@ const Header = () => {
               <Link href="/shop">Shop</Link>
             </li>
             <li className="cursor-pointer">
-              <Link href="/contact">About</Link>
+              <a href="/contact">About</a>
             </li>
             <li className="cursor-pointer">
-              <Link href="/contact"> Contact</Link>
+              <a href="/contact"> Contact</a>
             </li>
           </ul>
           <div className="flex items-center justify-center gap-4 md:gap-12 sm:gap-1">
@@ -89,9 +89,11 @@ const Header = () => {
               <li className="cursor-pointer">
                 <Link href="/shop">Shop</Link>
               </li>
-              <li className="cursor-pointer">About</li>
               <li className="cursor-pointer">
-                <Link href="/contact"> Contact</Link>
+                <a href="/contact">About</a>
+              </li>
+              <li className="cursor-pointer">
+                <a href="/contact"> Contact</a>
               </li>
             </ul>
 
@@ -123,39 +125,55 @@ const Header = () => {
         )}
       </div>
 
-      {/* Cart Modal */}
       {isCartOpen && (
         <div className="fixed inset-0 bg-gray-700 bg-opacity-50 z-60">
-          <div className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-white w-4/5 md:w-1/3 rounded-lg shadow-lg p-4">
+          <div className="absolute top-0  right-0  bg-white w-4/5 md:w-1/3 rounded-lg shadow-lg p-4">
             <button
               onClick={toggleCart}
               className="absolute top-2 right-2 text-xl font-bold text-gray-500"
             >
               ✖
             </button>
-            <h3 className="text-xl font-bold mb-4">Your Cart</h3>
-            {/* Add Cart Item Components here */}
+            <h3 className="text-xl font-bold mb-4 border-b border-b-gray-400 pb-4">
+              <a href="/cart">Shopping Cart</a>
+            </h3>
             <div className="space-y-4">
               <div className="flex justify-between">
-                <p>Product 1</p>
-                <p>$20.00</p>
+                <div className="flex justify-between items-center gap-5">
+                  <img src="/images/cart3.png" alt="" />
+                  <img src="/images/cart2.png" alt="" />
+                  <img src="/images/cart1.png" alt="" />
+                </div>
+                <p>Rs. 250,000.00</p>
               </div>
               <div className="flex justify-between">
-                <p>Product 2</p>
-                <p>$15.00</p>
+                <div className="flex justify-between items-center gap-5">
+                  <img src="/images/cart4.png" alt="" />
+                  <img src="/images/cart5.png" alt="" />
+                  <img src="/images/cart6.png" alt="" />
+                </div>
+                <p>Rs. 270,000.00</p>
               </div>
             </div>
             <div className="mt-4 flex justify-between font-bold text-lg">
-              <span>Total:</span>
-              <span>$35.00</span>
+              <span>Subtotal:</span>
+              <span className="font-semibold text-[#B88E2F]">
+                Rs. 520,000.00
+              </span>
             </div>
-            <div className="mt-4 flex justify-between gap-4">
-              <button className="bg-yellow-500 text-white py-2 px-4 rounded-full">
-                Checkout
+            <div className="mt-4 flex justify-center gap-2 border-t border-t-gray-400 pt-4">
+              <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black">
+                <a href="/cart">Cart</a>
+              </button>
+              <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black">
+                <a href="/checkout">Checkout</a>
+              </button>
+              <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black">
+                <a href="/comparison">Comparison</a>
               </button>
               <button
                 onClick={toggleCart}
-                className="bg-gray-300 text-black py-2 px-4 rounded-full"
+                className="bg-transparent text-black py-2 px-4 rounded-full border border-black"
               >
                 Close
               </button>

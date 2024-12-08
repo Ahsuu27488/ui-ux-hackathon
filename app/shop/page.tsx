@@ -11,7 +11,7 @@ const page = () => {
           alt="banner"
           className="relative flex justify-center items-center blur-sm"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[340px] max-sm:scale-50">
+        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[195px] max-sm:scale-50">
           <h1 className="font-semibold text-5xl text-black">Shop</h1>
           <p className="font-light text-lg text-black flex gap-4">
             <span className="font-medium">

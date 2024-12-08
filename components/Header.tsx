@@ -46,11 +46,13 @@ const Header = () => {
               alt="wishlist"
               className="w-5 md:w-6"
             />
-            <img
-              src="/images/icons/cart.png"
-              alt="cart"
-              className="w-5 md:w-6"
-            />
+            <Link href="cart">
+              <img
+                src="/images/icons/cart.png"
+                alt="cart"
+                className="w-5 md:w-6"
+              />
+            </Link>
           </div>
         </div>
 
@@ -64,8 +66,14 @@ const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 w-full bg-white shadow-lg z-50 transition-all ease-in-out scroll-smooth">
             <ul className="flex flex-col items-center gap-4 py-4 font-poppins text-sm font-medium">
-              <li className="cursor-pointer">Home</li>
-              <li className="cursor-pointer">Shop</li>
+              <li className="cursor-pointer">
+                <li className="cursor-pointer">
+                  <Link href="/">Home</Link>
+                </li>
+              </li>
+              <li className="cursor-pointer">
+                <Link href="/shop">Shop</Link>
+              </li>
               <li className="cursor-pointer">About</li>
               <li className="cursor-pointer">Contact</li>
             </ul>
@@ -86,11 +94,13 @@ const Header = () => {
                 alt="wishlist"
                 className="w-5 md:w-6"
               />
-              <img
-                src="/images/icons/cart.png"
-                alt="cart"
-                className="w-5 md:w-6"
-              />
+              <Link href="cart">
+                <img
+                  src="/images/icons/cart.png"
+                  alt="cart"
+                  className="w-5 md:w-6"
+                />
+              </Link>
             </div>
           </div>
         )}

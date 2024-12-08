@@ -2,7 +2,7 @@ import React from "react";
 
 const Browse = () => {
   return (
-    <div className="flex flex-col gap-3 justify-center items-center pt-10 max-md:pt-2">
+    <div className="flex flex-col gap-3 justify-center items-center pt-10 max-md:pt-2 ">
       <h1 className="font-poppins text-3xl font-bold text-[#333333] max-md:text-xl">
         Browse The Range
       </h1>

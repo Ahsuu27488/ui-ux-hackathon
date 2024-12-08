@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SlideShow = () => {
@@ -13,9 +14,11 @@ const SlideShow = () => {
             inspire you
           </p>
           <div className="pt-12 max-sm:w-[330px]">
-            <button className="bg-[#B88E2F] border border-[#B88E2F] w-60 h-12 font-semibold text-lg max-sm:font-medium text-[#FFFFFF] l">
-              Show More
-            </button>
+            <Link href="/shop">
+              <button className="bg-[#B88E2F] border border-[#B88E2F] w-60 h-12 font-semibold text-lg max-sm:font-medium text-[#FFFFFF] l">
+                Show More
+              </button>
+            </Link>
           </div>
         </div>
       </div>

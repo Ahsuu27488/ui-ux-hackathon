@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
+import Link from "next/link";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -12,16 +12,21 @@ const Header = () => {
     <div className="bg-[#FFFFFF] shadow-md box-border sticky top-0 z-50 ">
       <div className="flex items-center gap-40 justify-between px-4 md:mx-14 py-5 ">
         <div className="flex items-center gap-2">
+          <Link href="/"></Link>
           <img src="/images/logo.png" alt="Logo" className="w-8 md:w-10" />
           <h1 className="text-2xl md:text-4xl font-bold font-montserrat">
-            Furniro
+            <Link href="/">Furniro</Link>
           </h1>
         </div>
 
         <div className="hidden md:flex justify-between items-center flex-1">
           <ul className="flex gap-6 md:gap-20 font-poppins text-sm md:text-[18px] font-medium items-center">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Shop</li>
+            <li className="cursor-pointer">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link href="/shop">Shop</Link>
+            </li>
             <li className="cursor-pointer">About</li>
             <li className="cursor-pointer">Contact</li>
           </ul>

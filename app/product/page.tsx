@@ -3,6 +3,7 @@ import RelatedProducts from "@/components/RelatedProducts";
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   const [quantity, setQuantity] = useState(1);
@@ -16,9 +17,13 @@ const page = () => {
     <div>
       <div className="font-poppins font-normal text-[16px] bg-[#F9F1E7] flex px-24 py-8">
         <h1 className="flex gap-5 px-3">
-          <span className="text-[#9F9F9F]">Home</span>{" "}
+          <span className="text-[#9F9F9F]">
+            <Link href="/"> Home</Link>
+          </span>{" "}
           <img src="/images/icons/arrownext.png" alt="icon" />
-          <span className="text-[#9F9F9F]">Shop</span>{" "}
+          <span className="text-[#9F9F9F]">
+            <Link href="/shop"> Shop</Link>
+          </span>{" "}
           <img src="/images/icons/arrownext.png" alt="icon" />
         </h1>
         <h1 className="px-3 border-l font-medium border-l-gray-400">

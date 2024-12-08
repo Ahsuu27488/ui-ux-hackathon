@@ -28,14 +28,19 @@ const Header = () => {
               <Link href="/shop">Shop</Link>
             </li>
             <li className="cursor-pointer">About</li>
-            <li className="cursor-pointer">Contact</li>
+            <li className="cursor-pointer">
+              <Link href="/contact"> Contact</Link>
+            </li>
           </ul>
           <div className="flex items-center justify-center gap-4 md:gap-12 sm:gap-1">
-            <img
-              src="/images/icons/help.png"
-              alt="help"
-              className="w-5 md:w-6"
-            />
+            <Link href="/contact">
+              {" "}
+              <img
+                src="/images/icons/help.png"
+                alt="help"
+                className="w-5 md:w-6"
+              />
+            </Link>
             <img
               src="/images/icons/search.png"
               alt="search"
@@ -75,7 +80,9 @@ const Header = () => {
                 <Link href="/shop">Shop</Link>
               </li>
               <li className="cursor-pointer">About</li>
-              <li className="cursor-pointer">Contact</li>
+              <li className="cursor-pointer">
+                <Link href="/contact"> Contact</Link>
+              </li>
             </ul>
 
             <div className="flex items-center justify-center gap-8 pb-5 md:gap-12 sm:gap-1">

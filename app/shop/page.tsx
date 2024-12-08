@@ -54,7 +54,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="py-16 max-sm:py-0">
+      <div className="pt-16 pb-16 max-sm:py-0">
         <MainProducts />
         <MainProducts />
         <MainProducts />

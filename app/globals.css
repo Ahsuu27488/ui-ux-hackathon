@@ -40,3 +40,26 @@ body {
     @apply pb-10 font-poppins text-[#666666] max-md:text-sm;
   }
 }
+
+/* Add this to your global styles (e.g., `globals.css` or in the tailwind config) */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}

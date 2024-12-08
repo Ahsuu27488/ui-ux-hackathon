@@ -1,37 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Furniro Ecommerce 🛒
 
-First, run the development server:
+![Furniro Logo](https://via.placeholder.com/150)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Purpose
+Furniro is an ecommerce platform developed for the Governor IT Initiative UIUX Hackathon. The platform offers a sleek and modern design, focused on providing a responsive and seamless shopping experience for users.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Components Implemented
+- 🌟 **Responsive Design**: Mobile-first and adaptive layout.
+- 🔍 **Product Search**: Users can easily find products.
+- 🛒 **Add to Cart**: Items can be added to the cart for checkout.
+- 💳 **Secure Checkout**: A simple and secure checkout flow.
+- 🎨 **Modern UI/UX**: A user-friendly interface using modern design principles.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Steps to Run the Project Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ahsuu27488/ui-ux-hackathon.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ui-ux-hackathon
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Demo
+- Live site: [Furniro Ecommerce](https://furniro-hackathon.netlify.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Homepage Screenshot](https://via.placeholder.com/800x400)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
+- 🖥️ **Frontend**: React, Next.js
+- 🎨 **Styling**: Tailwind CSS
+- 🚀 **Deployment**: Netlify
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# ui-ux-hackathon" 
+---
+
+## Contact
+- **Developer**: Muhammad Ahsan
+- **Email**: ahsanrajput811@gmail.com
+
+---
+
+## Submit Link
+Please submit your project using the [Google form](https://forms.gle/vqEsQPaW8btsvnTC7).

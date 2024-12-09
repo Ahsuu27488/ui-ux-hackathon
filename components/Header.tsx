@@ -240,13 +240,13 @@ const Header = () => {
               </div>
               <div className="mt-4 flex justify-center gap-1 border-t border-t-gray-400 pt-4 max-sm:flex-col max-sm:gap-2">
                 <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black max-sm:w-full">
-                  <a href="/cart">Go to Cart</a>
+                  <Link href="/cart">Go to Cart</Link>
                 </button>
                 <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black max-sm:w-full">
-                  <a href="/checkout">Checkout</a>
+                  <Link href="/checkout">Checkout</Link>
                 </button>
                 <button className="bg-transparent text-black py-2 px-4 rounded-full border border-black max-sm:w-full">
-                  <a href="/comparison">Comparison</a>
+                  <Link href="/compare">Comparison</Link>
                 </button>
                 <button
                   onClick={toggleCart}

@@ -1,15 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const page = () => {
   return (
     <div>
       <div className="">
-        <img
+        <Image  width={1440} height={328} 
           src="/images/shop-bg.png"
           alt="banner"
           className="relative flex justify-center items-center blur-sm"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[195px] max-sm:scale-50">
+        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[340px] max-sm:scale-50">
           <h1 className="font-semibold text-5xl text-black">Cart</h1>
           <p className="font-light text-lg text-black flex gap-4">
             <span className="font-medium">
@@ -31,7 +32,7 @@ const page = () => {
             </div>
             <div className="grid grid-cols-5 py-4 px-10 font-normal text-[16px] text-[#9F9F9F] items-center max-sm:text-[14px] max-sm:grid-cols-4">
               <div>
-                <img
+                <Image  width={108} height={105} 
                   src="/images/cartproduct.png"
                   alt="Product"
                   className="w-full max-sm:w-16"
@@ -44,7 +45,7 @@ const page = () => {
               </h1>
               <h1 className="text-black flex gap-7 items-end max-sm:text-[12px]">
                 Rs. 250,000.00{" "}
-                <img
+                <Image  width={28} height={28} 
                   src="/images/icons/bin.png"
                   alt="delete"
                   className="max-sm:w-4"
@@ -68,16 +69,16 @@ const page = () => {
             </h1>
           </div>
           <button className="text-[20px] bg-transparent border border-black rounded-xl w-52 h-14 max-sm:w-40 max-sm:h-12">
-            <a href="/checkout">Check Out</a>
+            <Link href="/checkout">Check Out</Link>
           </button>
         </div>
       </div>
       <div className="bg-[#FAF3EA] mt-16">
         <div className="grid grid-cols-4 max-sm:grid-cols-2 px-14 py-28  items-center scale-90 gap-12 max-sm:scale-100 max-sm:py-14 max-sm:px-7">
-          <img src="/images/service1.png" alt="Services" />
-          <img src="/images/service2.png" alt="Services" />
-          <img src="/images/service3.png" alt="Services" />
-          <img src="/images/service4.png" alt="Services" />
+          <Image  width={337} height={70}  src="/images/service1.png" alt="Services" />
+          <Image  width={329} height={70}  src="/images/service2.png" alt="Services" />
+          <Image  width={245} height={70}  src="/images/service3.png" alt="Services" />
+          <Image  width={259} height={70}  src="/images/service4.png" alt="Services" />
         </div>
       </div>
     </div>

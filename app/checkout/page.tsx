@@ -1,15 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const page = () => {
   return (
     <div>
       <div className="">
-        <img
+        <Image  width={1440} height={328} 
           src="/images/shop-bg.png"
           alt="banner"
           className="relative flex justify-center items-center blur-sm"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[195px] max-sm:scale-50">
+        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[340px] max-sm:scale-50">
           <h1 className="font-semibold text-5xl text-black">Checkout</h1>
           <p className="font-light text-lg text-black flex gap-4">
             <span className="font-medium">
@@ -167,7 +168,7 @@ const page = () => {
             </h1>
           </div>
           <div  className="flex gap-4 items-center">
-            <img src="/images/icons/circle.png" alt="dot" className="h-fit w-fit" />
+            <Image  width={14} height={14}  src="/images/icons/circle.png" alt="dot" className="h-fit w-fit" />
             <h1>Direct Bank Transfer</h1>
           </div>
           <div className="font-light text-[16px] text-[#9F9F9F]  flex flex-col gap-3">
@@ -177,11 +178,11 @@ const page = () => {
               until the funds have cleared in our account.
             </p>
             <div className="flex gap-4 items-center">
-              <img src="/images/icons/stroke.png" alt="dot"  className="h-fit w-fit"/>
+              <Image  width={14} height={14}  src="/images/icons/stroke.png" alt="dot"  className="h-fit w-fit"/>
               <h1>Direct Bank Transfer</h1>
             </div>
             <div  className="flex gap-4 items-center">
-              <img src="/images/icons/stroke.png" alt="dot"  className="h-fit w-fit"/>
+              <Image  width={14} height={14}  src="/images/icons/stroke.png" alt="dot"  className="h-fit w-fit"/>
               <h1>Cash On Delivery</h1>
             </div>
           </div>

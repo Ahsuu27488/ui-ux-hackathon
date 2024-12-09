@@ -1,21 +1,22 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const OurProducts = () => {
   return (
-    <div className="px-[100px] py-[100px] flex flex-col justify-center items-center max-sm:px-0 max-sm:py-[0px] max-sm:scale-75">
+    <div className="px-[100px] py-[100px] flex flex-col justify-center items-center max-sm:px-1 max-sm:pl-1 max-sm:py-[0px] max-sm:scale-75">
       <h1 className="heading pb-10 max-sm:text-3xl">Our Products</h1>
       <Link href="/product">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 justify-center max-sm:justify-between">
           {/* Product1 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image  width={48} height={48} 
               src="/images/icons/-30.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img
+            <Image  width={285} height={301} 
               src="/images/products/syltherine.png"
               alt="Product"
               className="w-full h-full object-cover"
@@ -100,7 +101,7 @@ const OurProducts = () => {
 
           {/* Product2 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img src="/images/products/leviosa.png" alt="Product" />
+            <Image  width={285} height={301}  src="/images/products/leviosa.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Leviosa
@@ -176,13 +177,13 @@ const OurProducts = () => {
           </div>
           {/* Product3 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image  width={48} height={48}
               src="/images/icons/-50.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img src="/images/products/syltherine.png" alt="Product" />
+            <Image  width={285} height={301}  src="/images/products/syltherine.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Lolito
@@ -261,13 +262,13 @@ const OurProducts = () => {
           </div>
           {/* Product4 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image  width={48} height={48} 
               src="/images/icons/new.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img src="/images/products/respira.png" alt="Product" />
+            <Image  width={285} height={301}  src="/images/products/respira.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Respira
@@ -343,7 +344,7 @@ const OurProducts = () => {
           </div>
           {/* Product5 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img src="/images/products/grifo.png" alt="Product" />
+            <Image  width={285} height={301}  src="/images/products/grifo.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Grifo
@@ -419,13 +420,13 @@ const OurProducts = () => {
           </div>
           {/* Product6 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image width={48} height={48}
               src="/images/icons/new.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img src="/images/products/muggo.png" alt="Product" />
+            <Image  width={285} height={301} src="/images/products/muggo.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Muggo
@@ -501,13 +502,13 @@ const OurProducts = () => {
           </div>
           {/* Product7 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image  width={48} height={48} 
               src="/images/icons/-50.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img src="/images/products/pingky.png" alt="Product" />
+            <Image width={285} height={301}  src="/images/products/pingky.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Pingky
@@ -586,13 +587,13 @@ const OurProducts = () => {
           </div>
           {/* Product8 */}
           <div className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1">
-            <img
+            <Image  width={48} height={48}
               src="/images/icons/new.png"
               alt="discunt"
               className="absolute right-0 -translate-x-5 translate-y-5"
             />
 
-            <img src="/images/products/potty.png" alt="Product" />
+            <Image  width={285} height={301}  src="/images/products/potty.png" alt="Product" />
             <div className="px-5 py-[30px] flex flex-col">
               <h2 className="text-[#3A3A3A] font-semibold text-[24px]">
                 Potty

@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <div>
       <div className="flex justify-start items-center relative pb-[700px] max-md:pb-[230px]">
-        <img
+        <Image  width={1440} height={718} 
           src="/images/hero-bg.png"
           alt="hero-image"
           className=" absolute top-0"

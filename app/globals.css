@@ -10,6 +10,9 @@
   --geist-mono: var(--font-geist-mono);
   --montserrat: var(--font-montserrat);
   --poppins: var(--font-poppins);
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,12 +25,20 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--montserrat, Arial, sans-serif);
+  font-family: var(--poppins, Arial, sans-serif);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-montserrat {
+    font-family: var(--font-montserrat, Arial, sans-serif);
+  }
+
+  .font-poppins {
+    font-family: var(--font-poppins, Arial, sans-serif);
   }
 }
 
@@ -41,7 +52,6 @@ body {
   }
 }
 
-/* Add this to your global styles (e.g., `globals.css` or in the tailwind config) */
 @keyframes slideIn {
   0% {
     transform: translateY(-20px);
@@ -62,4 +72,8 @@ body {
     transform: translateY(-20px);
     opacity: 0;
   }
+}
+.right-sidebar {
+  position: sticky;
+  top: 20px; /* Adjust to control when it sticks */
 }

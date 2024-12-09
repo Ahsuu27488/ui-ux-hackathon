@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const SlideShow = () => {
   return (
@@ -24,25 +25,25 @@ const SlideShow = () => {
       </div>
       <div className="col-span-5 max-sm:overflow-x-auto max-sm:overflow-y-hidden">
         <div className="flex gap-5 justify-start items-start relative">
-          <img src="/images/design1.png" alt="Design" className="" />
+          <Image  width={404} height={582}  src="/images/design1.png" alt="Design" className="" />
           <div className="translate-x-6 -translate-y-6 absolute bg-[#FFFFFFB8] opacity-70 bottom-0 flex justify-center items-center py-7 px-5 flex-col">
-            <img src="/images/index.png" alt="" />
+            <Image  width={124} height={24}  src="/images/index.png" alt="" />
             <h1 className="font-poppins font-semibold text-[28px] text-[#3A3A3A]">
               Inner Peace
             </h1>
           </div>
           <button className="absolute bottom-0 -translate-y-6 translate-x-[222px] bg-[#B88E2F] w-12 h-12 flex justify-center items-center opacity-100">
-            <img src="/images/icons/arrowright.png" alt="arrowsvg" />
+            <Image  width={24} height={24}  src="/images/icons/arrowright.png" alt="arrowsvg" />
           </button>
 
           <div className="">
-            <img src="/images/design3.png" alt="Design" className="absolute" />
-            <img
+            <Image  width={372} height={486}  src="/images/design3.png" alt="Design" className="absolute" />
+            <Image  width={120} height={27} 
               src="/images/buttons.png"
               alt="Switch Styles"
               className="absolute bottom-0 -translate-y-12 max-sm:translate-y-[1px]"
             />
-            <img src="/images/design2.png" alt="Design" className="" />
+            <Image  width={52} height={486}  src="/images/design2.png" alt="Design" className="" />
           </div>
         </div>
       </div>

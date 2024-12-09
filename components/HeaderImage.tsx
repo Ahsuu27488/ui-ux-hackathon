@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-
+import Image from "next/image";
 
 const HeaderImage = () => {
   return (
     <div>
       <div className="">
-        <img
+        <Image  width={1440} height={328} 
           src="/images/shop-bg.png"
           alt="banner"
           className="relative flex justify-center items-center blur-sm"

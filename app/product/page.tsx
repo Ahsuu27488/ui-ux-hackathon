@@ -1,30 +1,32 @@
 "use client";
 import RelatedProducts from "@/components/RelatedProducts";
-import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const page = () => {
-  const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState("M");
-  const [selectedColor, setSelectedColor] = useState("white");
-
-  const increaseQuantity = () => setQuantity(quantity + 1);
-  const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
-
   return (
     <div>
-      <div className="font-poppins font-normal text-[16px] bg-[#F9F1E7] flex px-24 py-8">
+      <div className="font-poppins font-normal text-[16px] bg-[#F9F1E7] flex px-24 py-8 max-sm:px-4">
         <h1 className="flex gap-5 px-3">
           <span className="text-[#9F9F9F]">
             <Link href="/"> Home</Link>
           </span>{" "}
-          <img src="/images/icons/arrownext.png" alt="icon" />
+          <Image
+            width={20}
+            height={20}
+            src="/images/icons/arrownext.png"
+            alt="icon"
+          />
           <span className="text-[#9F9F9F]">
             <Link href="/shop"> Shop</Link>
           </span>{" "}
-          <img src="/images/icons/arrownext.png" alt="icon" />
+          <Image
+            width={20}
+            height={20}
+            src="/images/icons/arrownext.png"
+            alt="icon"
+          />
         </h1>
         <h1 className="px-3 border-l font-medium border-l-gray-400">
           Asgaard Sofa
@@ -35,7 +37,9 @@ const page = () => {
           {/* Left: Image Gallery */}
           <div className="flex flex-row-reverse gap-4 items-start h-[500px] w-[100%] max-sm:h-[500px pb-20]">
             <div className="bg-[#F9F1E7] rounded-[10px] h-full w-full flex justify-center items-center ">
-              <img
+              <Image
+                width={481}
+                height={391}
                 src="/images/mainframe.png"
                 alt="Main Product"
                 className="w-fit  px-7 object-cove rounded-[10px]"
@@ -48,7 +52,9 @@ const page = () => {
                 "/images/frame3.png",
                 "/images/frame4.png",
               ].map((src, index) => (
-                <img
+                <Image
+                  width={76}
+                  height={61}
                   key={index}
                   src={src}
                   alt={`Product Thumbnail ${index + 1}`}
@@ -67,7 +73,9 @@ const page = () => {
               sound.
             </p>
             <div className="flex gap-5">
-              <img
+              <Image
+                width={124}
+                height={20}
                 src="/images/icons/stars.png"
                 alt="stars"
                 className="border-r border-r-gray-400 pr-3"
@@ -107,9 +115,11 @@ const page = () => {
               <button className="py-3 px-4 border border-black rounded-xl">
                 Add to Cart
               </button>
-              <button className="py-3 px-4 border border-black rounded-xl">
-                + Compare
-              </button>
+              <Link href="/product/compare">
+                <button className="py-3 px-4 border border-black rounded-xl">
+                  + Compare
+                </button>
+              </Link>
             </div>
             <div className="grid grid-cols-3 text-[16px] text-[#9F9F9F]">
               <div>
@@ -162,13 +172,17 @@ const page = () => {
           </p>
         </div>
         <div className="flex justify-between items-stretch pt-10 max-sm:flex-col max-sm:scale-75 max-sm:gap-4 max-sm:pt-6">
-          <img
+          <Image
+            width={605}
+            height={348}
             src="/images/sofa1.png"
             alt="SOFA"
             className="bg-[#F9F1E7] rounded-lg"
           />
-          <img
-            src="/images/sofa1.png"
+          <Image
+            width={605}
+            height={348}
+            src="/images/sofa2.png"
             alt="SOFA"
             className="bg-[#F9F1E7] rounded-lg"
           />

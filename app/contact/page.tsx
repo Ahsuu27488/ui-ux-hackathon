@@ -1,16 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 
 const page = () => {
   return (
     <div>
       <div className="">
-        <img
+        <Image  width={1440} height={328} 
           src="/images/shop-bg.png"
           alt="banner"
           className="relative flex justify-center items-center blur-sm"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[195px] max-sm:scale-50">
+        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 -translate-y-20 max-sm:-translate-y-[340px] max-sm:scale-50">
           <h1 className="font-semibold text-5xl text-black">Contact</h1>
           <p className="font-light text-lg text-black flex gap-4">
             <span className="font-medium">
@@ -31,7 +33,7 @@ const page = () => {
         </p>
       </div>
       <div className="flex justify-center items-center gap-52  max-sm:gap-3 max-sm:flex-col">
-        <img src="/images/contacts.png" alt="Contact" />
+        <Image  width={363} height={505}  src="/images/contacts.png" alt="Contact" />
         <div className=" flex flex-col gap-6 justify-start items-start">
           <label
             htmlFor=""

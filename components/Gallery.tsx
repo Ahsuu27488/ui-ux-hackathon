@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Gallery = () => {
   return (
@@ -8,7 +9,7 @@ const Gallery = () => {
       </p>
       <h1 className="font-bold text-[40px] text-[#3A3A3A]">#FuniroFurniture</h1>
       <div className="">
-        <img src="/images/images.png" alt="Gallery" />
+        <Image  width={1440} height={721}  src="/images/images.png" alt="Gallery" />
       </div>
     </div>
   );

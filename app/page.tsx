@@ -6,7 +6,7 @@ import SlideShow from "@/components/SlideShow";
 import React from "react";
 export default function Home() {
   return (
-    <div className="font-poppins">
+    <div className="font-poppins overflow-x-clip">
       <HeroSection />
       <Browse />
       <OurProducts />

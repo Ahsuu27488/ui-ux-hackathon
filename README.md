@@ -1,3 +1,6 @@
+## NOTE !!
+This web application is optimized for a dark mode color scheme. For the best visual experience, please enable dark mode in your device settings.
+
 
 # Furniro Ecommerce 🛒
 

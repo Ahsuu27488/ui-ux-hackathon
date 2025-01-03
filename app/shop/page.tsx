@@ -1,4 +1,4 @@
-import MainProducts from "@/components/MainProducts";
+import ProductGrid from "@/components/ProductGrid";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -57,10 +57,11 @@ const page = () => {
         </div>
       </div>
       <div className="pt-16 pb-16 max-sm:py-0">
+        <ProductGrid/>
+        {/* <MainProducts />
         <MainProducts />
         <MainProducts />
-        <MainProducts />
-        <MainProducts />
+        <MainProducts /> */}
       </div>
       <div className="flex gap-6 justify-center items-center">
         <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7] h-14 w-14 p-1">

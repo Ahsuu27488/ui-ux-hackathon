@@ -63,7 +63,7 @@ const OurProducts = () => {
                   <button className="hover:filter hover:brightness-150 bg-transparent rounded-lg flex gap-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
+                      fill="red"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"

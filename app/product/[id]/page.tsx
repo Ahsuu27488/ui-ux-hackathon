@@ -1,13 +1,37 @@
 "use client";
-import RelatedProducts from "@/components/RelatedProducts";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { products } from "../../api/products";
+import RelatedProducts from "@/components/RelatedProducts";
 
-const page = () => {
+interface Product {
+  id: number;
+  title: string;
+  image: string;
+  excerpt: string;
+  currentPrice: number;
+  markedPrice: number;
+  ratings: number;
+  description: string;
+}
+
+const ProductPage = () => {
+  const params = useParams();
+  const [product, setProduct] = useState<Product | null>(null);
+
+  useEffect(() => {
+    if (params.id) {
+      const productData = products.find((p) => p.id === Number(params.id));
+      setProduct(productData || null);
+    }
+  }, [params.id]);
+
+  if (!product) return <div>Loading...</div>;
+
   return (
     <div>
-      
       <div className="font-poppins font-normal text-[16px] bg-[#F9F1E7] flex px-24 py-8 max-sm:px-4">
         <h1 className="flex gap-5 px-3">
           <span className="text-[#9F9F9F]">
@@ -30,7 +54,7 @@ const page = () => {
           />
         </h1>
         <h1 className="px-3 border-l font-medium border-l-gray-400">
-          Asgaard Sofa
+          {product.title}
         </h1>
       </div>
       <div>
@@ -41,55 +65,48 @@ const page = () => {
               <Image
                 width={481}
                 height={391}
-                src="/images/mainframe.png"
-                alt="Main Product"
-                className="w-fit  px-7 object-cove rounded-[10px]"
+                src="/images/products/syltherine.png"
+                alt={product.title}
+                className="w-fit px-7 object-cover rounded-[10px]"
               />
             </div>
             <div className="flex gap-4 flex-col">
-              {[
-                "/images/frame1.png",
-                "/images/frame2.png",
-                "/images/frame3.png",
-                "/images/frame4.png",
-              ].map((src, index) => (
+              {[1, 2, 3, 4].map((index) => (
                 <Image
                   width={76}
                   height={61}
                   key={index}
-                  src={src}
-                  alt={`Product Thumbnail ${index + 1}`}
-                  className="bg-[#F9F1E7] w-[170px] rounded-[10px] h-[138px] p-5 object-cover  hover:border hover:border-[#DB4444] cursor-pointer"
+                  src="/images/products/syltherine.png"
+                  alt={`${product.title} Thumbnail ${index}`}
+                  className="bg-[#F9F1E7] w-[170px] rounded-[10px] h-[138px] p-5 object-cover hover:border hover:border-[#DB4444] cursor-pointer"
                 />
               ))}
             </div>
           </div>
           <div className="flex flex-col gap-5 justify-center items-start pt-20">
-            <h1 className="text-5xl">Asgaard Sofa</h1>
-            <h1 className="text-2xl text-[#9F9F9F]">Rs. 250,000.00</h1>
-            <p className="text-[13px]">
-              Setting the bar as one of the loudest speakers in its class, the
-              Kilburn is a compact, stout-hearted hero with a well-balanced
-              audio which boasts a clear midrange and extended highs for a
-              sound.
-            </p>
+            <h1 className="text-5xl">{product.title}</h1>
+            <h1 className="text-2xl text-[#9F9F9F]">
+              Rs. {product.currentPrice.toLocaleString()}.00
+            </h1>
+            <p className="text-[13px]">{product.description}</p>
             <div className="flex gap-5">
-              <Image
-                width={124}
-                height={20}
-                src="/images/icons/stars.png"
-                alt="stars"
-                className="border-r border-r-gray-400 pr-3"
-              />
-              <h1 className="text-[13px] text-[#9F9F9F]">5 Customer Review</h1>
+              <div className="border-r border-r-gray-400 pr-3">
+                {/* Replace static stars with dynamic rating */}
+                {"★".repeat(Math.floor(product.ratings))}
+                {product.ratings % 1 >= 0.5 ? "½" : ""}
+                {"☆".repeat(5 - Math.ceil(product.ratings))}
+              </div>
+              <h1 className="text-[13px] text-[#9F9F9F]">
+                {product.ratings} Customer Review
+              </h1>
             </div>
             <div>
               <h1 className="text-[13px] text-[#9F9F9F]">Size</h1>
               <div className="flex gap-1 justify-start items-center">
-                <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7]  p-3">
+                <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7] p-3">
                   L
                 </button>
-                <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7]  p-3">
+                <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7] p-3">
                   XL
                 </button>
                 <button className="text-[16px] rounded-lg #F9F1E7 text-black bg-[#F9F1E7] focus:bg-[#B88E2F] focus:text-[#F9F1E7] hover:bg-[#B88E2F] hover:text-[#F9F1E7] p-3">
@@ -125,7 +142,7 @@ const page = () => {
             <div className="grid grid-cols-3 text-[16px] text-[#9F9F9F]">
               <div>
                 <h1>SKU</h1>
-                <h1>Catergory</h1>
+                <h1>Category</h1>
                 <h1>Tags</h1>
                 <h1>Share</h1>
               </div>
@@ -136,9 +153,9 @@ const page = () => {
                 <h1>:</h1>
               </div>
               <div>
-                <h1>SS001</h1>
-                <h1>Sofas</h1>
-                <h1>Sofa, Chair, Home, Shop</h1>
+                <h1>SS00{product.id}</h1>
+                <h1>Furniture</h1>
+                <h1>{product.title}, Furniture, Shop</h1>
                 <h1>Share</h1>
               </div>
             </div>
@@ -147,44 +164,31 @@ const page = () => {
       </div>
       <div>
         <div className="flex gap-14 max-sm:gap-4 justify-center items-center">
-          <h1 className="font-medium text-black text-[24px]">Descrption</h1>
+          <h1 className="font-medium text-black text-[24px]">Description</h1>
           <h1 className="font-medium text-[#9F9F9F] text-[24px]">
             Additional Information
           </h1>
           <h1 className="font-medium text-[#9F9F9F] text-[24px]">
-            Reviews [5]
+            Reviews [{Math.floor(product.ratings)}]
           </h1>
         </div>
         <div className="text-[16px] text-[#9F9F9F] px-32 pt-16 flex flex-col gap-8 max-sm:px-5 max-sm:pt-10 max-sm:gap-4">
-          <p>
-            Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
-            portable active stereo speaker takes the unmistakable look and sound
-            of Marshall, unplugs the chords, and takes the show on the road.
-          </p>
-          <p>
-            Weighing in under 7 pounds, the Kilburn is a lightweight piece of
-            vintage styled engineering. Setting the bar as one of the loudest
-            speakers in its class, the Kilburn is a compact, stout-hearted hero
-            with a well-balanced audio which boasts a clear midrange and
-            extended highs for a sound that is both articulate and pronounced.
-            The analogue knobs allow you to fine tune the controls to your
-            personal preferences while the guitar-influenced leather strap
-            enables easy and stylish travel.
-          </p>
+          <p>{product.description}</p>
+          <p>{product.excerpt}</p>
         </div>
         <div className="flex justify-between items-stretch pt-10 max-sm:flex-col max-sm:scale-75 max-sm:gap-4 max-sm:pt-6">
           <Image
             width={605}
             height={348}
-            src="/images/sofa1.png"
-            alt="SOFA"
+            src={product.image}
+            alt={`${product.title} View 1`}
             className="bg-[#F9F1E7] rounded-lg"
           />
           <Image
             width={605}
             height={348}
-            src="/images/sofa2.png"
-            alt="SOFA"
+            src={product.image}
+            alt={`${product.title} View 2`}
             className="bg-[#F9F1E7] rounded-lg"
           />
         </div>
@@ -194,4 +198,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProductPage;

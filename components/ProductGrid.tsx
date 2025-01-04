@@ -11,7 +11,7 @@ const ProductGrid = () => {
         <Link
           href={`/product/${product.id}`}
           key={product.id}
-          className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1"
+          className="relative h-fit group w-[220px] sm:w-[285px] bg-[#F4F5F7] col-span-1 rounded overflow-hidden shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
         >
           <Image
             width={48}
@@ -48,7 +48,7 @@ const ProductGrid = () => {
             <div className="opacity-100 flex gap-6 flex-col justify-center items-center">
               <Link
                 href={`/product/${product.id}`}
-                className="font-poppins font-semibold text-[16px] text-[#B88E2F] h-12 w-52 bg-[#FFFFFF] flex items-center justify-center"
+                className="font-poppins font-semibold text-[16px] text-[#B88E2F] h-12 w-52 bg-[#FFFFFF] flex items-center justify-center top-52"
               >
                 Add to Cart
               </Link>

@@ -4,6 +4,7 @@ import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import CartProviderWrapper from "./providers/CartProviderWrapper";
 
 // Local fonts
 const geistSans = localFont({
@@ -42,23 +43,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  // Combine all font classes for better readability
+  const fontClasses = `
+    ${geistSans.variable} 
+    ${geistMono.variable} 
+    ${poppins.variable} 
+    ${montserrat.variable}
+    antialiased
+  `;
+
   return (
     <html lang="en">
-      <body
-        className={`
-          ${geistSans.variable} 
-          ${geistMono.variable} 
-          ${poppins.variable} 
-          ${montserrat.variable} 
-          antialiased
-        `}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body className={fontClasses}>
+        <CartProviderWrapper>
+          <Header />
+          {children} 
+          <Footer />
+        </CartProviderWrapper>
       </body>
     </html>
   );

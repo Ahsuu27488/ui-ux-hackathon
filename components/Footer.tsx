@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="grid grid-cols-2 md:grid-cols-6 gap-6 mx-4 md:mx-[100px] py-[50px] border-b border-b-gray-400">
         <div className="col-span-2 flex flex-col gap-4 md:gap-10">
           <h1 className="font-poppins font-bold text-lg md:text-2xl text-black">
-            Furniro.
+            FurniVerse.
           </h1>
           <div>
             <h1 className="text-sm md:text-[16px] font-normal text-[#9F9F9F] font-poppins">
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <h1 className="py-4 md:py-8 font-poppins px-4 md:px-[100px] font-normal text-sm md:text-[16px]">
-        2023 Furniro. All rights reserved.
+        2025 FurniVerse. All rights reserved. Coded by <span className="font-bold">Ahsan Raj</span>
       </h1>
     </div>
   );
